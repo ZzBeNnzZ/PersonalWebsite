@@ -1,0 +1,75 @@
+#navBar{
+    border-bottom: solid 1px rgb(207, 205, 205);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+
+}
+
+.navLink{
+    padding: 10px;
+    margin: auto;
+    text-decoration: none;
+}
+
+.menuOption{
+    display: inline-block;
+    position: relative;
+    color: #1F3541;
+}
+
+.menuOption:after{
+    background-color: #1F3541;
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom ;
+    transition: transform 0.25s ease;
+}
+
+.menuOption:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom ;
+}
+
+#linkDiv{
+    margin-left: 10%;
+    width: 50%;
+    display: flex;
+
+}
+#logoImg{
+    width:  45px;
+    height: 45px;
+    border-radius: 50px;
+
+}
+.iconImage{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+#externalLinkDiv{
+    align-items: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: 10%;
+}
+
+a{
+    text-decoration: none;
+    color: #1F3541;
+}
+
+a .iconImage:hover{
+    opacity: 70%;
+    transition:  0.2s ease-out;
+
+}
