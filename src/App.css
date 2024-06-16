@@ -1,25 +1,34 @@
-#root{
+#root {
   margin: auto;
 }
 
+#profilePic {
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+}
 
-.landing_text{
+div {
+  text-align: center;
+}
+
+.landing_text {
   padding: 10px;
-} 
+}
 
-.highlight_style{
+.highlight_style {
   color: #ba896e;
 }
 
-#landing_background{
+#landing_background {
   width: 0;
-  text-align: center;
   overflow: hidden;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 5%;
   transition: all 0.5 ease;
-  background-color: rgba(222, 222, 222, 0.3);
-  border: solid;
+  background-color: white;
+  border-top: solid 1px;
+  border-bottom: solid 1px;
   padding: 1%;
   transition-delay: 2s;
 }
@@ -27,18 +36,81 @@
 /* Animation keyframes */
 @keyframes expandAnimation {
   from {
-      width: 0;
-      opacity: 1;
-      transform: translateX(-50%) scaleX(0); /* Start from center and scaled down */
+    width: 0;
+    opacity: 1;
+    transform: translateX(-50%) scaleX(0); /* Start from center and scaled down */
   }
   to {
-      width: 100%; /* Full width */
-      opacity: 1;
-      transform: scaleX(1); /* End at full scale */
+    width: 100%; /* Full width */
+    opacity: 1;
+    transform: scaleX(1); /* End at full scale */
   }
 }
 
-#landing_background{
+#landing_background {
   /* display: flex; */
-  animation: expandAnimation 2s ease-out forwards ;
+  animation: expandAnimation 2s ease-out forwards;
+}
+
+#aboutMeDiv {
+  margin: 25px;
+}
+
+.aboutMeButtons {
+  margin-left: 15px !important;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: border-bottom 0.3s ease-in-out;
+}
+.aboutMeButtons::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Adjust the height of the underline */
+  bottom: 0;
+  left: 0;
+  background-color: #1f3541; /* Color of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+.aboutMeButtons.active::after {
+  transform: scaleX(1); /* Show the underline on active */
+  transform-origin: bottom left;
+}
+
+.infoSection {
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.info {
+  padding: 10px;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
+
+.info.show {
+  opacity: 1;
+  max-height: 500px; /* Adjust as needed */
+}
+
+.listContent {
+  margin: auto;
+  text-align: left;
+  list-style-type: disc;
+  width: 50%;
+  height: 350px;
+}
+
+.listContent li {
+  padding: 5px;
+}
+
+html {
+  scroll-behavior: smooth;
 }

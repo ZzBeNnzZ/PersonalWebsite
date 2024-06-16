@@ -23,7 +23,7 @@ const MenuBar = () => {
         <a href="#">
           <img id="logoImg" src={brownIcon} alt="Logo"></img>
         </a>
-        <a color="secondary" className="navLink" href="#">
+        <a color="secondary" className="navLink" href="#aboutMeDiv">
           <Typography className="menuOption" variant="h3" color={"primary"}>
             About Me
           </Typography>
